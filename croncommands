@@ -1,0 +1,24 @@
+# Author: Selbi Nuryyeva
+# Date: Nov 19, 2019
+
+# some useful commands when setting up crontab
+# crontab executes a job script at time intervals set by a user
+
+# to show current active crontab command (if there is any)
+crontab -l
+# if none, it will say "no crontab for selbi"
+
+# to edit the cron command
+crontab -e
+# opens up a new txt file where you write your one or few lines of crontab command
+
+# For example, to execute your job script every 20 mins and save with the date, below is the crontab command
+# you save in the txt file that opened from the above code
+*/20 * * * * sh /u/home/s/selbi/monitor/monitor.sh > /u/home/s/selbi/monitor/jobinfo`date +\%Y\%m\%d\%H\%M\%S`.log
+# in my case, my job scripts name is monitor.sh
+
+# to check if your crontab code is running
+service crond status
+
+# Whenever an error with crontab happens, error logs are saved and can be found here (replace selbi with your username)
+vi /var/mail/selbi
