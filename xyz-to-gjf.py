@@ -13,7 +13,7 @@ __date__ = 'September 21, 2020'
 # To execute it: "python3 xyz-to-gjf.py"
 
 # Number of cores, memory, method, basis set, charge and multiplicity can be
-# modified in lines 35-41.
+# modified in lines 38-44.
 
 import sys
 import os
